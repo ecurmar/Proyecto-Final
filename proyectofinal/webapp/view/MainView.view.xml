@@ -1,0 +1,25 @@
+<mvc:View controllerName="logaligroup.proyectofinal.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>mainMenu}">
+        <content>
+            <Panel headerText="{i18n>employees}" class="sapUiREsponsiveMargin" width="auto" expandable="{device>/system/phone}" expand="{= !$(device>/system/phone)}" >
+                <content>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" press="onCreateEmployee" headerImage="sap-icon://add-employee">
+		                        <TileContent footer="Crear empleados" />
+			        </GenericTile>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" press="onViewEmployees" headerImage="sap-icon://employee-lookup">
+		                        <TileContent footer="Ver empleados" />
+			        </GenericTile>
+                </content>
+            </Panel>
+            <Panel headerText="{i18n>pedidos}" class="sapUiREsponsiveMargin" width="auto" expandable="{device>/system/phone}" expand="{= !$(device>/system/phone)}" >
+                <content>
+                    <GenericTile class="sapUiTinyMarginBegin sapUiTinyMarginTop tileLayout" press="press" headerImage="sap-icon://signature">
+		                        <TileContent footer="Firmar pedidos" />
+			        </GenericTile>
+                </content>
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>
